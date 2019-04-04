@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+.clickImg {
+  height: 8rem;
+  /* background-color: blue; */
+  
+}
+.img-container{
+  margin: auto;
+  padding: 0.2rem;
+  background-color: blue;
+  width: 80%;
+  height: 100%;
+  cursor: pointer;
+}
+img{
+  display: block;
+  margin: auto;
+  height: 100%
+}
