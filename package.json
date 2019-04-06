@@ -1,8 +1,18 @@
 {
+<<<<<<< HEAD
   "name": "memory-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+=======
+  "homepage": "https://zkinsk.github.io/react-memory-game/",
+  "name": "react-memory-game",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-favicon": "^2.0.1",
+>>>>>>> 58a402393fde6f03fc2fa30f9d339ef1b810dee5
     "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -12,7 +22,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+<<<<<<< HEAD
     "eject": "react-scripts eject"
+=======
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+>>>>>>> 58a402393fde6f03fc2fa30f9d339ef1b810dee5
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -22,5 +38,12 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
+<<<<<<< HEAD
   ]
+=======
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+>>>>>>> 58a402393fde6f03fc2fa30f9d339ef1b810dee5
 }
