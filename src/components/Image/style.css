@@ -3,6 +3,8 @@
 }
 .clickImg {
   height: 8rem;
+
+  
   /* background-color: blue; */
   
 }
@@ -10,12 +12,23 @@
   margin: auto;
   padding: 0.2rem;
   background-color: blue;
-  width: 80%;
+  border: .1rem solid transparent;
+  border-radius: 0.3em;
+  width: 90%;
   height: 100%;
   cursor: pointer;
+  transition: all 0.5s;
+  box-shadow: 0.2rem 0.2rem 0.5rem #888888;
 }
+
+.img-container:hover {
+  box-shadow: 0.5rem 0.5rem 0.5rem #888888;
+  transform: scale(1.03);
+}
+
 img{
   display: block;
   margin: auto;
-  height: 100%
+  height: 100%;
+  max-width: 100%;
 }

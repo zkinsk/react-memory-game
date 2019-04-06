@@ -15,7 +15,7 @@
     "order":100,
     "picked": false,
     "id": 3,
-    "src": "fusion-1.png"
+    "src": "saphire.png"
   },
   {
     "order":90,
@@ -51,7 +51,7 @@
     "order":40,
     "picked": false,
     "id": 9,
-    "src": "pink-diamond.png"
+    "src": "greg.png"
   },
   {
     "order":30,

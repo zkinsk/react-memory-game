@@ -15,35 +15,67 @@ class App extends Component {
     cards
   };
   
-  clickCard = (event) =>{
-    console.log(event);
-    console.log(this.state.cards)
-    this.sortCards();
-    this.state.score ++
-    this.setState({score: this.state.score})
+  clickCard = (id, picked) =>{
+    if (picked){
+      this.setState({score: 0})
+      this.resetCards();
+    } else {
+      let cards = this.state.cards
+      this.sortCards(id, cards);
+      let score = this.state.score
+      let maxScore = this.state.maxScore;
+      score ++;
+      if (score > maxScore){
+        maxScore = score
+        if (maxScore >= 12){
+          alert("You Win!")
+          score = 0
+        }
+      };
+      this.setState({score: score, maxScore: maxScore})
+    }
   };
+  setPicked = (id) => {
 
-  sortCards = () => {
-    let cards = this.state.cards
+  }
+
+  sortCards = (id, cards) => {
+    if(id){
+      let index = cards.findIndex(card =>  card.id === id);
+      cards[index].picked = true;
+    }
     cards.map(card => card.order = (Math.floor(Math.random() * 1000)))
     cards.sort((a, b) => a.order - b.order)
     this.setState({cards});
+  }
+
+  resetCards= () => {
+    let resetCards = this.state.cards;
+    resetCards.map(card => card.picked = false)
+    this.sortCards(null,resetCards)
   }
 
   render() {
     return (
       <Wrapper>
         <Header currentScore={this.state.score} highScore={this.state.maxScore}/>
-      <div className="row justify-content-center">
-      {this.state.cards.map(card => 
-      
-      <Image 
-      clickCard = {this.clickCard}
-      id={card.id} 
-      key={card.id}
-      src={images(`./${card.src}`)}
-      />)}
-      </div>
+        <div className="row justify-content-center">
+          <div className="col-8">
+            <div className="row justify-content-center">
+              {
+                this.state.cards.map(card => 
+                  <Image 
+                    clickCard = {this.clickCard}
+                    id={card.id} 
+                    key={card.id}
+                    picked={card.picked}
+                    src={images(`./${card.src}`)}
+                  />
+                )
+              }
+            </div>
+          </div>
+        </div>
     </Wrapper>
     );
   }
