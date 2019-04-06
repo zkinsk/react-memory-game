@@ -1,0 +1,74 @@
+[
+  {
+    "order":0,
+    "picked": false,
+    "id": 1,
+    "src": "amethyst.png"
+  },
+  {
+    "order":110,
+    "picked": false,
+    "id": 2,
+    "src": "connie.png"
+  },
+  {
+    "order":100,
+    "picked": false,
+    "id": 3,
+    "src": "saphire.png"
+  },
+  {
+    "order":90,
+    "picked": false,
+    "id": 4,
+    "src": "garnet.png"
+  },
+  {
+    "order":80,
+    "picked": false,
+    "id": 5,
+    "src": "lapis.png"
+  },
+  {
+    "order":70,
+    "picked": false,
+    "id": 6,
+    "src": "lion.png"
+  },
+  {
+    "order":60,
+    "picked": false,
+    "id": 7,
+    "src": "pearl.png"
+  },
+  {
+    "order":50,
+    "picked": false,
+    "id": 8,
+    "src": "peridot.png"
+  },
+  {
+    "order":40,
+    "picked": false,
+    "id": 9,
+    "src": "greg.png"
+  },
+  {
+    "order":30,
+    "picked": false,
+    "id": 10,
+    "src": "ruby.png"
+  },
+  {
+    "order":20,
+    "picked": false,
+    "id": 11,
+    "src": "steven.png"
+  },
+  {
+    "order":10,
+    "picked": false,
+    "id": 12,
+    "src": "white-diamond.png"
+  }
+]
