@@ -3,11 +3,8 @@
 }
 .clickImg {
   height: 8rem;
-
-  
-  /* background-color: blue; */
-  
 }
+
 .img-container{
   margin: auto;
   padding: 0.2rem;
@@ -20,6 +17,12 @@
   transition: all 0.5s;
   box-shadow: 0.2rem 0.2rem 0.5rem #888888;
 }
+
+@media screen and (max-width: 992px) { 
+  .img-container{
+    width: 100%;
+  }
+ }
 
 .img-container:hover {
   box-shadow: 0.5rem 0.5rem 0.5rem #888888;

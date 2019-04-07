@@ -3,3 +3,9 @@
   display: inline;
   margin-left: 1.0rem;
 }
+
+@media screen and (max-width: 992px) { 
+  .scoreArea h4{
+    display: block;
+  }
+ }

@@ -35,9 +35,6 @@ class App extends Component {
       this.setState({score: score, maxScore: maxScore})
     }
   };
-  setPicked = (id) => {
-
-  }
 
   sortCards = (id, cards) => {
     if(id){
@@ -49,7 +46,7 @@ class App extends Component {
     this.setState({cards});
   }
 
-  resetCards= () => {
+  resetCards = () => {
     let resetCards = this.state.cards;
     resetCards.map(card => card.picked = false)
     this.sortCards(null,resetCards)
@@ -60,7 +57,7 @@ class App extends Component {
       <Wrapper>
         <Header currentScore={this.state.score} highScore={this.state.maxScore}/>
         <div className="row justify-content-center">
-          <div className="col-8">
+          <div className="col-12 col-md-10">
             <div className="row justify-content-center">
               {
                 this.state.cards.map(card => 
