@@ -1,5 +1,5 @@
 ## Memory Clicky Game built in React 
-**[Link](https://young-sierra-70479.herokuapp.com/)**
+**Play the game here: [Link](https://young-sierra-70479.herokuapp.com/)**
 
 #### How to play the game
 Head over to Heroku in the link above and you will be presened with 12 cards of characters from the cartoon Steven Universe
@@ -10,7 +10,7 @@ You max score will increment until you reach 12 cards
 
 #### Technologies Used
 
-- This is my first step into client side rendering using React JS. 
+- Client side rendering using React JS. 
 - Bootstrap for styling
 
 
