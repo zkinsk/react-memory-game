@@ -2,10 +2,28 @@
 .scoreArea h4 {
   display: inline;
   margin-left: 1.0rem;
+  font-size: 1.4em;
 }
 
 @media screen and (max-width: 992px) { 
   .scoreArea h4{
+    font-size: 1.2em;
     display: block;
+    padding: 0.3rem;
+    margin-right: .3rem;
   }
+
+  h3 {
+    font-size: 1.2em;
+  }
+ }
+
+ @media screen and (max-width: 720px) {
+   .scoreArea h4 {
+     font-size: 1.0em;
+   }
+ }
+
+ .navbar {
+   background-color: rgba(211, 211, 211, 0.502);
  }

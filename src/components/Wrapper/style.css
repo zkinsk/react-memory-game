@@ -1,5 +1,9 @@
 .wrapper {
   /* padding-top: 50px; */
   background: #ECEFF1;
+  background-image: url('../../bg-images/2742e5e00edcf96c7b2156cd578585f3949b9cb7v2_hq.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   min-height: 100%;
 }
