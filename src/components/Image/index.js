@@ -7,7 +7,7 @@ function Image(props) {
       <div className="img-container">
         <img
           alt={props.id}
-          src={props.src}
+          src={`./images/${props.src}`}
           key={props.src}
         />
       </div>
