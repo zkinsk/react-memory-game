@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import Image from './components/Image'
+// import Image from './components/Image'
 import Wrapper from './components/Wrapper'
 import Header from './components/Header'
+import Gamebox from './components/Gamebox'
+import Winscreen from './components/Winscreen'
 import './App.css';
 import cards from './cards.json'
-const images = require.context('../public/images', true)
+// const images = require.context('../public/images', true)
 
 
 class App extends Component {
   state = {
+    win: false,
     score: 0,
     maxScore: 0,
     cards
@@ -28,7 +31,7 @@ class App extends Component {
       if (score > maxScore){
         maxScore = score
         if (maxScore >= 12){
-          alert("You Win!")
+          this.setState({win: true})
           score = 0
         }
       };
@@ -46,8 +49,13 @@ class App extends Component {
     this.setState({cards});
   }
 
+  resetGame = () => {
+    this.setState({score: 0, win: false})
+    this.resetCards();
+  }
+
   resetCards = () => {
-    let resetCards = this.state.cards;
+    let resetCards = [...this.state.cards];
     resetCards.map(card => card.picked = false)
     this.sortCards(null,resetCards)
   }
@@ -56,24 +64,8 @@ class App extends Component {
     return (
       <Wrapper>
         <Header currentScore={this.state.score} highScore={this.state.maxScore}/>
-        <div className="row justify-content-center">
-          <div className="col-12 col-md-10">
-            <div className="row justify-content-center">
-              {
-                this.state.cards.map(card => 
-                  <Image 
-                    clickCard = {this.clickCard}
-                    id={card.id} 
-                    key={card.id}
-                    picked={card.picked}
-                    src={images(`./${card.src}`)}
-                  />
-                )
-              }
-            </div>
-          </div>
-        </div>
-    </Wrapper>
+        {this.state.win? <Winscreen resetGame={this.resetGame}/>:<Gamebox cards={this.state.cards} clickCard={this.clickCard} />}
+      </Wrapper>
     );
   }
 }
