@@ -11,11 +11,12 @@ import cards from './cards.json'
 
 
 class App extends Component {
+
   state = {
     win: false,
     score: 0,
     maxScore: 0,
-    cards
+    cards,
   };
   
   clickCard = (id, picked) =>{
@@ -24,17 +25,16 @@ class App extends Component {
       this.resetCards();
     } else {
       let cards = this.state.cards
-      this.sortCards(id, cards);
       let score = this.state.score
       let maxScore = this.state.maxScore;
       score ++;
       if (score > maxScore){
         maxScore = score
-        if (score >= 12){
-          this.setState({win: true})
-          score = 0
-        }
       };
+      if (score >= 12){
+        this.setState({win: true})
+      }
+      this.sortCards(id, cards);
       this.setState({score: score, maxScore: maxScore})
     }
   };
@@ -50,6 +50,7 @@ class App extends Component {
   }
 
   resetGame = () => {
+    console.log("resetting game");
     this.setState({score: 0, win: false})
     this.resetCards();
   }
@@ -64,7 +65,7 @@ class App extends Component {
     return (
       <Wrapper>
         <Header currentScore={this.state.score} highScore={this.state.maxScore}/>
-        {this.state.win? <Winscreen resetGame={this.resetGame}/>:<Gamebox cards={this.state.cards} clickCard={this.clickCard} />}
+        {this.state.win? <Winscreen resetGame={this.resetGame}/> : <Gamebox cards={this.state.cards} clickCard={this.clickCard} />}
       </Wrapper>
     );
   }
