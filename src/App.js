@@ -30,7 +30,7 @@ class App extends Component {
       score ++;
       if (score > maxScore){
         maxScore = score
-        if (maxScore >= 12){
+        if (score >= 12){
           this.setState({win: true})
           score = 0
         }
