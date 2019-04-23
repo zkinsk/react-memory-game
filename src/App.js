@@ -16,8 +16,12 @@ class App extends Component {
     win: false,
     score: 0,
     maxScore: 0,
-    cards,
+    cards: [],
   };
+
+  componentDidMount(){
+    this.setState({cards: cards})
+  }
   
   clickCard = (id, picked) =>{
     if (picked){
