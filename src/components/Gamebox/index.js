@@ -6,7 +6,7 @@ import "./style.css";
 
 function Gamebox(props) {
   return (
-    <div className="row justify-content-center mx-0">
+    <div className="row justify-content-center">
       <div className="col-12 col-md-10">
         <div className="row justify-content-center">
           {

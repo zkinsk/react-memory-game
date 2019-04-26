@@ -69,7 +69,9 @@ class App extends Component {
     return (
       <Wrapper>
         <Header currentScore={this.state.score} highScore={this.state.maxScore}/>
-        {this.state.win? <Winscreen resetGame={this.resetGame}/> : <Gamebox cards={this.state.cards} clickCard={this.clickCard} />}
+        <div className='container-fluid'>
+          {this.state.win? <Winscreen resetGame={this.resetGame}/> : <Gamebox cards={this.state.cards} clickCard={this.clickCard} />}
+        </div>
       </Wrapper>
     );
   }
